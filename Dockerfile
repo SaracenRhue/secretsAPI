@@ -12,7 +12,7 @@ RUN sed -i 's/#*PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ss
 
 RUN pip install -r requirements.txt
 
-WORKDIR /home/projects
+WORKDIR /home/app/projects
 
 ENV PORT=9000
 EXPOSE 9000
