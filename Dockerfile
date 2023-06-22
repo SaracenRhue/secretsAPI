@@ -8,6 +8,7 @@ RUN apt update && \
     apt install -y --no-install-recommends openssh-server && \
     echo "root:secrets" | chpasswd && \
     mkdir /var/run/sshd
+RUN sed -i 's/#*PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config
 
 RUN pip install -r requirements.txt
 
