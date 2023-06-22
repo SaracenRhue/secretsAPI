@@ -11,6 +11,8 @@ RUN apt update && \
 
 RUN pip install -r requirements.txt
 
+WORKDIR /home/projects
+
 ENV PORT=9000
 EXPOSE 9000
 
